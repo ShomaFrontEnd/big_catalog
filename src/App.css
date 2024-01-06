@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  main {
+    font-family: 'Readex Pro', sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white text-gray-700 w-72  min-h-[10rem] border py-3 shadow-lg rounded-md overflow-hidden
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs bg-gray-100
+  }
+
+  .product-title {
+    @apply font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap
+  }
+
+  .discount-percent {
+    @apply bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white
+  }
+
+  .button-primary {
+    @apply bg-red-500/80 hover:bg-red-500/90 px-6 py-2 text-white rounded-md font-medium tracking-wider transition
+  }
+
+  .button-icon {
+    @apply flex-grow flex  justify-center items-center bg-gray-300/60 hover:bg-gray-300/80 transition rounded-md  lg:bg-gray-300/60 lg:hover:bg-gray-300/80  md:px-2 
+  
+  }
+}
+
+
+
+
+
+
+
+/* .custom_main_bg-image{
+  width: 99.1vw;
+  height: 100vh;
+  opacity: 80%;
+background-image: url(https://baulo.club/uploads/posts/2023-03/1678940743_baulo-club-p-soft-minimalizm-v-interere-krasivo-79.jpg);
+} */
