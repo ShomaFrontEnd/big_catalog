@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductsTable from "../productsTable";
 
 import CategoryControl from "../controlComponents/categoryControl";
 import ProductControlPage from "../controlComponents/productControlPage";
 import ImgControlGridList from "../controlComponents/imgControlGridList";
-import { useImage } from "../../../../hooks/useImage";
+// import { useImage } from "../../../../hooks/useImage";
 
 
 
