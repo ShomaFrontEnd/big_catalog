@@ -13,7 +13,8 @@ import {
 import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
 
-const firebaseConfig = {
+
+export const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "nadezhda-furniture-factory.firebaseapp.com",
   databaseURL: "https://nadezhda-furniture-factory-default-rtdb.europe-west1.firebasedatabase.app",
@@ -23,6 +24,7 @@ const firebaseConfig = {
   appId: "1:549704688926:web:e03d953874ed125e1b150f"
 };
 
+console.log(1,process.env.REACT_APP_FIREBASE_API_KEY,2,firebaseConfig.apiKey)
 // const imagesEndpoint = 'furnitures/';
 
 const ImageContext = React.createContext();

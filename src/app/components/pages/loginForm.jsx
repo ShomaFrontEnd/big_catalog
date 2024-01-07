@@ -12,7 +12,7 @@ const LoginForm = ({ email, password, stayOn, ...rest }) => {
     setShowPassword(prevState => !prevState);
   };
 
-  const [formData, setFormData] = useState({ password: 'womafly0517' })
+  const [formData, setFormData] = useState({ })
 
 
   const handleChange = (target) => {

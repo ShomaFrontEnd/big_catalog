@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  // createBrowserRouter,
-  createHashRouter,
+  createBrowserRouter,
+  // createHashRouter,
   createRoutesFromElements,
   Navigate,
   Route,
@@ -26,8 +26,8 @@ import NetworkError from './app/components/pages/networkError';
 import ImageProvider from './app/hooks/useImage';
 
 
-const router = createHashRouter(
-// const router = createBrowserRouter(
+// const router = createHashRouter(
+const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={
       <ImageProvider>

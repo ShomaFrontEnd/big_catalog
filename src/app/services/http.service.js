@@ -1,7 +1,7 @@
 import axios from "axios";
 import configFile from '../../config.json'
 import sessionStorageService from "./sessionstorage.service";
-
+import { firebaseConfig } from "../hooks/useImage";
 
 
 
@@ -11,13 +11,13 @@ const http = axios.create({
   baseURL: configFile.apiEndpoint
 })
 
+
 export const httpAuth = axios.create({
   baseURL: 'https://identitytoolkit.googleapis.com/v1/',
-  params: { key: process.env.REACT_APP_FIREBASE_API_KEY }
+  params: { key: firebaseConfig.apiKey }
 })
-console.log(process.env.REACT_APP_FIREBASE_API_KEY)
+// console.log(firebaseConfig.apiKey)
 // ---------------------- REQUEST ---------------------------------------------------------------
-
 http.interceptors.request.use(
   async function (config) {
     if (configFile.isFirebase) {
@@ -38,7 +38,7 @@ http.interceptors.request.use(
           }
         );
       }
-      
+
       const accessToken = sessionStorageService.getAccessToken();
       if (accessToken) {
         config.params = { ...config.params, auth: accessToken };
@@ -67,9 +67,9 @@ http.interceptors.response.use(
 
   function (error) {
     const expectedErrors = error.response && error.response.status >= 400 && error.response.status < 500;
- 
+
     if (expectedErrors) {
-      console.log('Что то пошло не так.попробуйте попозже!',error)
+      console.log('Что то пошло не так.попробуйте попозже!', error)
     }
     else { return Promise.reject(error); }
   }

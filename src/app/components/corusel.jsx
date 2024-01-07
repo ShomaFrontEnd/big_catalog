@@ -75,6 +75,7 @@ const Corusel = () => {
   // console.log(currentIndex)
 
   return (<div className='h-screen'>
+
     {!isImgLoading ? <div className='h-screen'>
       {/* <Sidebar /> */}
       <div className='p-4 sm:ml-64 ' >
@@ -97,7 +98,7 @@ const Corusel = () => {
         <span className="">Загрузка...</span>
       </div>
 
-
+      
     }
   </div>
   );
