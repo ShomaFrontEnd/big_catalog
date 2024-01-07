@@ -14,7 +14,7 @@ import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB7R4u-iw1dzSbIDgK_TZPFW3vXiNt5NaM",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "nadezhda-furniture-factory.firebaseapp.com",
   databaseURL: "https://nadezhda-furniture-factory-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "nadezhda-furniture-factory",

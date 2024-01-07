@@ -20,7 +20,7 @@ const SelectField = ({ name, label, defaultOption, options, error, onChange }) =
         id={name + label}
         className="text-black bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
       >
-        <option className='bg-gray-300 ' defaultValue disabled>Выберите категорию</option>
+        <option className='bg-gray-300 ' value='' hidden="hidden">Выберите категорию</option>
         {options && options.map(o => (
           <option key={o.id} value={o.id}>{o.name}</option>
         )

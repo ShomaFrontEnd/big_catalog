@@ -1,18 +1,9 @@
 import React from 'react';
 
 
-
-
-
-
-
-
-
 const About = () => {
 
-
   return (
-
     <div className='m-1 mt-5 h-screen'>
 
       <img alt='about' className="float-left w-64 mx-3 rounded" src='/images/les.jpg' />

@@ -19,7 +19,7 @@ const ProductControlPage = () => {
   const params = useParams();
   const { prodId } = params;
   const navigate = useNavigate();
-  // console.log(prodId)
+ 
   const [mainInfo, setMainInfo] = useState({});
   const [newProperty, setNewProperty] = useState({});
   const [productProperty, setProductProperty] = useState({});
@@ -29,7 +29,7 @@ const ProductControlPage = () => {
   const { getProductById, categoryIsLoading, category, updateProduct, isLoading } = useProduct();
   const product = !isLoading ? getProductById(prodId) : null;
 
-  // console.log(prodId)
+  // console.log(mainInfo)
 
 
   const handleSaveChanges = async () => {

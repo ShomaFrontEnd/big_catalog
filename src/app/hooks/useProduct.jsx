@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import productService from '../services/product.service';
 import getErrorMessage from '../utils/errorCatcher';
 import { toast } from 'react-toastify';
-import { useAuth } from './useAuth';
+
 import categoryService from '../services/category.service';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate,  } from 'react-router-dom';
 import { useImage } from './useImage';
 
 
@@ -15,10 +15,10 @@ export const useProduct = () => { return useContext(ProductContext) };
 
 const ProductProvider = ({ children }) => {
   const navigate = useNavigate();
-  const params = useParams();
+  // const params = useParams();
   const { pathname } = useLocation()
 
-  const { currentUser } = useAuth();
+  // const { currentUser } = useAuth();
   const { imgData, deleteImage, setImgData, fetchImages } = useImage();
 
   const [isLoading, setLoading] = useState(true);

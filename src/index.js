@@ -16,7 +16,7 @@ import ProductProvider from './app/hooks/useProduct';
 
 import App from './App';
 import Corusel from './app/components/corusel';
-import About from './app/components/pages/aboutPage';
+import About from './app/components/aboutPage';
 import CatalogPage from './app/components/pages/catalogPage';
 import PromotionPage from './app/components/pages/promotionPage';
 import AdminPage from './app/components/pages/admin/mainAdminPage';
@@ -26,8 +26,8 @@ import NetworkError from './app/components/pages/networkError';
 import ImageProvider from './app/hooks/useImage';
 
 
-// const router = createBrowserRouter(
 const router = createHashRouter(
+// const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={
       <ImageProvider>
