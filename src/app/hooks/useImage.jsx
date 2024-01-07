@@ -15,7 +15,7 @@ import { toast } from 'react-toastify';
 
 
 export const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  apiKey: process.env.react_app_firebase_api_key,
   authDomain: "nadezhda-furniture-factory.firebaseapp.com",
   databaseURL: "https://nadezhda-furniture-factory-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "nadezhda-furniture-factory",

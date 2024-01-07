@@ -49,9 +49,6 @@ const router = createBrowserRouter(
       <Route element={<ProtectedRoute />}>
         <Route path='admin/:product?/:prodId?/:edit?/:createProduct?' element={<AdminPage />} />
       </Route>
-
-
-
       <Route path="" element={<Navigate to="/home" replace />} />
       <Route path="*" element={<Navigate to="/home" replace />} />
     </Route>

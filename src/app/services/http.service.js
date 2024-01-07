@@ -1,9 +1,6 @@
 import axios from "axios";
 import configFile from '../../config.json'
 import sessionStorageService from "./sessionstorage.service";
-import { firebaseConfig } from "../hooks/useImage";
-
-
 
 // AXIOS INSTANCES ---------------------------------------------------------------------------
 
@@ -14,9 +11,9 @@ const http = axios.create({
 
 export const httpAuth = axios.create({
   baseURL: 'https://identitytoolkit.googleapis.com/v1/',
-  params: { key: firebaseConfig.apiKey }
+  params: { key: process.env.react_app_firebase_api_key }
 })
-// console.log(firebaseConfig.apiKey)
+
 // ---------------------- REQUEST ---------------------------------------------------------------
 http.interceptors.request.use(
   async function (config) {
