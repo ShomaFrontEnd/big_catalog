@@ -25,12 +25,12 @@ import LogOut from './app/components/logout';
 import NetworkError from './app/components/pages/networkError';
 import ImageProvider from './app/hooks/useImage';
 
+// const router = createBrowserRouter(
 
 const router = createHashRouter(
-// const router = createBrowserRouter(
-  createRoutesFromElements(
+  createRoutesFromElements( 
     <Route path='' element={
-      <ImageProvider>
+      <ImageProvider >
         <AuthProvider>
           <ProductProvider>
             <App />
@@ -58,7 +58,7 @@ const router = createHashRouter(
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode >
     <RouterProvider router={router} />
   </React.StrictMode>
 );

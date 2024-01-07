@@ -11,9 +11,9 @@ const http = axios.create({
 
 export const httpAuth = axios.create({
   baseURL: 'https://identitytoolkit.googleapis.com/v1/',
-  params: { key: process.env.react_app_firebase_api_key }
+  params: { key: 'AIzaSyB7R4u-iw1dzSbIDgK_TZPFW3vXiNt5NaM' }
 })
-
+console.log(process.env.react_app_firebase_api_key)
 // ---------------------- REQUEST ---------------------------------------------------------------
 http.interceptors.request.use(
   async function (config) {
