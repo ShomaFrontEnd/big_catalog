@@ -65,9 +65,10 @@ const ProductsTable = () => {
 
 
             <table className="w-full py-3 text-sm text-left rtl:text-right text-gray-400">
+              
               <caption
                 onClick={() => navigate(`product/${nanoid()}/newProduct/createProduct`)}
-                className="bg-green-500/80 rounded-xl m-2  py-3 duration-300 hover:bg-red-600 transition-1000 cursor-pointer lg:text-center  text-white text-left ">
+                className="w-1/2 ms-4 bg-green-500/80 rounded-xl m-2  py-3 duration-300 hover:bg-red-600 transition-1000 cursor-pointer text-center  text-white text-left ">
                 <i className="bi bi-plus-lg"> </i>
                 Создать новый продукт
               </caption>
@@ -75,7 +76,7 @@ const ProductsTable = () => {
                 Список мебели
               </caption>
 
-              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <thead className="text-xs  uppercase bg-gray-700 text-gray-400">
                 <tr>
                   <th scope="col" className="px-6 py-3">
                     <span className="sr-only">Фото продукта</span>
@@ -119,7 +120,7 @@ const ProductsTable = () => {
                         </Link>}
                     </th>
 
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap text-white">
                       <Link to={'/catalog/productPage/' + item.id}>
                         <div className="text-base font-semibold">{item.name} </div>
                       </Link>
@@ -140,7 +141,7 @@ const ProductsTable = () => {
                       {item.discount ? item.discount : '0'} %
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <Link to={'/admin/product/' + item.id + '/edit'} className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <Link to={'/admin/product/' + item.id + '/edit'} className="font-medium text-blue-500 hover:underline">
                         Изменить
                       </Link>
                     </td>

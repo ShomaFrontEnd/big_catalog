@@ -13,10 +13,10 @@ const Corusel = () => {
 
   useEffect(() => {
     fetchImages('mainCarousel')
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  
+
   // console.log(imgData)
 
   // const slides = [
@@ -74,15 +74,18 @@ const Corusel = () => {
 
   // console.log(currentIndex)
 
-  return (<div className='h-screen'>
+  return (<div className='h-screen '>
 
-    {!isImgLoading ? <div className='h-screen'>
+    {!isImgLoading ? 
+    <div className='bg-gray-'>
       {/* <Sidebar /> */}
-      <div className='p-4 sm:ml-64 ' >
-        <div className='max-w-[45vw] h-[31vw] w-full m-auto py-1 px-4 relative group '>
-          <div style={{ backgroundImage: `url(${imgData[currentIndex].url})` }}
-            className='w-full h-full rounded-xl bg-center bg-cover duration-500 '
-          ></div>
+      <div className='p-4 sm:ml-64  ' >
+        <div className='max-w-[45vw] h-[27vw]  w-full m-auto border py-5 px-4 rounded-xl  bg-gray-200  relative group '>
+          <img
+          alt={imgData[currentIndex].name}
+            src={imgData[currentIndex].url}
+            className='w-full h-full rounded-xl bg-center bg-cover  duration-500 '
+          />
           {/* title */}
           {/* {slides[currentIndex].title &&
             <div
@@ -98,7 +101,7 @@ const Corusel = () => {
         <span className="">Загрузка...</span>
       </div>
 
-      
+
     }
   </div>
   );

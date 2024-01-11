@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="relative w-full z-40 border  rounded-t shadow z-90 mt-20 h- bg-gray-800/90">
+    <footer className="relative w-full  z-40 border  rounded-t shadow z-90 mt-20  bg-gray-800/90">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/" className="hover:underline">Надежда мебель™</a>. Все Права Защищены.
         </span>

@@ -49,9 +49,10 @@ const CategoryControl = () => {
 
   }
   async function handleCreateCategory(id) {
-    const trimed = inputValue.category && !!inputValue.category.trim();
+    const trimed = inputValue.categoryAdd.trim();
+    console.log(trimed)
     if (!trimed) { return; }
-    await addCategory({ name: inputValue.category, id: nanoid() });
+    await addCategory({ name: inputValue.categoryAdd, id: nanoid() });
     setInputValue({});
     setOpenModal({ state: false, type: '' });
   }

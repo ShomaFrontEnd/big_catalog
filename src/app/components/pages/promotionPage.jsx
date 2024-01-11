@@ -13,7 +13,7 @@ const PromotionPage = () => {
   const promotionData = product.filter(d => d.discount);
 
   return (
-    <div className="px-52 h-screen">
+    <div className="px-52">
       <Card data={promotionData} />
     </div>
   );

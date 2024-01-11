@@ -15,7 +15,7 @@ import { toast } from 'react-toastify';
 
 
 export const firebaseConfig = {
-  apiKey: process.env.react_app_firebase_api_key,
+  apiKey: 'AIzaSyB7R4u-iw1dzSbIDgK_TZPFW3vXiNt5NaM',
   authDomain: "nadezhda-furniture-factory.firebaseapp.com",
   databaseURL: "https://nadezhda-furniture-factory-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "nadezhda-furniture-factory",
@@ -24,7 +24,7 @@ export const firebaseConfig = {
   appId: "1:549704688926:web:e03d953874ed125e1b150f"
 };
 
-console.log(1,process.env.REACT_APP_FIREBASE_API_KEY,2,firebaseConfig.apiKey)
+
 // const imagesEndpoint = 'furnitures/';
 
 const ImageContext = React.createContext();
@@ -132,7 +132,14 @@ const ImageProvider = ({ children }) => {
 
 
   return (
-    <ImageContext.Provider value={{ isImgLoading, setImgData, imgData, deleteImage, uploadImages, fetchImages }}>
+    <ImageContext.Provider value={{ 
+      isImgLoading, 
+      imgData, 
+      setImgData, 
+      fetchImages,
+      uploadImages, 
+      deleteImage, 
+       }}>
       {children}
     </ ImageContext.Provider >
   )

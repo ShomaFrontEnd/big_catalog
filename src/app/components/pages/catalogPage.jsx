@@ -53,17 +53,17 @@ const CatalogPage = () => {
 
 
   return (
-    <>
+    <div>
       {params.productPage
         ? <ProductPage />
         : <>
           <Sidebar onSetCategory={handleSelectCategory} selectedCategory={category} allData={product} />
-          <div className='p-4 h-full sm:ml-64 min-h-screen '>
+          <div className='p-4 h-[100%] sm:ml-64 min-h-scree '>
             <h1 className='text-3xl  md:ml-10 font-bold '>Диваны в <span className='text-red-500'>Томске</span></h1>
             <hr className='border w-full border-black border-2'></hr>
             <div className='container mx-auto'>
 
-            <Card data={cropedData} />
+              <Card data={cropedData} />
             </div>
             <Pagination
               currentPage={currentPage}
@@ -77,7 +77,7 @@ const CatalogPage = () => {
         </>
       }
 
-    </>
+    </div>
   );
 }
 

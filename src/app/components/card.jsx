@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Card = ({ data }) => {
-// console.log(data)
+  // console.log(data)
 
   return <div className=" gap-8 flex flex-wrap items-center justify-center ">
     {data && data.map(item => (
@@ -28,13 +28,22 @@ const Card = ({ data }) => {
           </h2>
 
           <div className="h-[50px]">
-            <span className="text-xl font-bold ">{item.price} руб.</span>
-            {item.discountPrice && <div className=" flex items-center gap-2 mt-1 ">
-              <span className="line-through text-sm text-gray-400">
-                {item.discountPrice} руб.
-              </span>
-              <span className="discount-percent ">- {item.discount}%</span>
-            </div>}
+
+            {item.discountPrice
+              ? (
+                <div>
+                  <span className="text-xl font-bold ">{item.discountPrice} руб.</span>
+
+                  <div className=" flex items-center gap-2 mt-1 ">
+                    <span className="line-through text-sm text-gray-400">
+                      {item.price} руб.
+                    </span>
+                    <span className="discount-percent ">- {item.discount}%</span>
+                  </div>
+                </div>
+              )
+              : <span className="text-xl font-bold ">{item.price} руб.</span>
+            }
           </div>
 
           <span className="flex items-center mt-1">

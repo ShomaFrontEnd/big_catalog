@@ -152,7 +152,7 @@ const ProductControlPage = () => {
         <button onClick={() => navigate(-1)} className="absolute top-3 left-10 duration-200 text-center bg-yellow-400 text-white rounded-xl p-1 px-2 active:bg-yellow-400 hover:bg-yellow-300">←Назад</button>
       </section>
 
-      <div className="md:grid h-screen md:grid-cols-6 bg-gray-300 text-white gap-3 bg-gray-500 pt-3 sm:grid-cols-6 mb-5 ">
+      <div className="md:grid h-scree md:grid-cols-6 bg-gray-300 text-white gap-3 bg-gray-500 pt-3 sm:grid-cols-6 mb-5 ">
 
         {/* left side*/}
         <div className="md:col-span-3 rounded bg-gray-600  text-white">
